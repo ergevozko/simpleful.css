@@ -1,0 +1,70 @@
+/*!
+ *
+ * simpleful.css v0.1.0 - Table
+ * Very simple styling for Table element
+ *
+ */
+
+/* === Reset specific styling in any browser === */
+thead, tbody, tfoot, tr, td, th {
+	border-color: inherit;
+	border-style: solid;
+	border-width: 0;
+}
+
+/* === Add the correct text align in all browsers === */
+th {
+	color: var(--rg-heading);
+	font-weight: 600;
+	text-align: inherit;
+	text-align: -webkit-match-parent;
+}
+
+/* === Base === */
+.rg-table {
+	width: 100%;
+	caption-side: bottom;
+	border-color: var(--rg-border);
+}
+.rg-table > tbody {
+	vertical-align: inherit;
+}
+.rg-table > thead {
+	vertical-align: bottom;
+}
+.rg-table > :not(caption) > * > * {
+	padding: .5rem;
+	border-bottom-width: 1px;
+	border-color: var(--rg-border);
+}
+.rg-table > :not(:last-child) > :last-child > *{
+	border-bottom-color: currentColor;
+}
+
+/* === Bordered === */
+.rg-table--bordered > :not(caption) > * > * {
+	border-width: 0 1px
+}
+.rg-table--bordered > :not(caption) > * {
+	border-width: 1px 0;
+}
+
+/* === Striped rows === */
+.rg-table--striped > tbody > tr:nth-of-type(odd) > * {
+	background-color: var(--rg-other-bg);
+}
+
+/* === Caption === */
+.rg-table--captionTop {
+	caption-side: top;
+}
+.rg-table caption {
+	padding: .5rem 0;
+	color: var(--rg-light);
+}
+
+/* === Parent element class for making table responsive === */
+.rg-tableResponsive {
+	-webkit-overflow-scrolling: touch;
+	overflow-x: auto;
+}

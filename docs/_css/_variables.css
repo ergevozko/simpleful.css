@@ -1,0 +1,37 @@
+/*!
+ *
+ * simpleful.css v0.1.0 - Variables CSS
+ * Very simple style sheet template which allows you to change the style by just changing the values of the variables
+ *
+ */
+:root {
+	/* Color - Base */
+	--rg-main: #fe4439; /* theme main color, also for `Link` color and default `Button` background */
+	--rg-body-bg: #222222; /* background color for `Body` element */
+	--rg-body-color: #dedede; /* text color for `Body` element */
+	--rg-border: #6f6f6e; /* default `border` color */
+
+	/* Color - Richtext */
+	--rg-link-hover: #f24136; /* text color for `Link` on hover */
+	--rg-heading: #ffffff; /* text color `Heading` */
+	--rg-code-color: #ffbfbb; /* text color for `Computer Code` elements */
+
+	/* Color - Buttons */
+	--rg-button-color: #ffffff; /* text color for default `Button` */
+	--rg-button-hover: #a52c25; /* background color for default `Button` on hover */
+
+	/* Color - Forms */
+	--rg-input-bg: #ffffff; /* background color for `Form Input` */
+	--rg-input-color: #445566; /* text color for `Form Input` */
+	--rg-input-placeholder: #8899aa; /* text color for `Form Input:Placeholder` */
+	--rg-input-disabled-bg: #ebebeb; /* background color for `Form Input:Disabled** */
+	
+	/* Color - Misc */
+	--rg-light: #9fa0a3; /* light text/background color */
+	--rg-muted: #6e6e6f; /* muted text/background color */
+	--rg-other-bg: #131313; /* background color for `Computer Code` and `Table Striped` element */
+
+	/* Font - Base */
+	--rg-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--rg-font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

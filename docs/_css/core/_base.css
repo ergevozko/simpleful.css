@@ -1,0 +1,266 @@
+/*!
+ *
+ * simpleful.css v0.1.0 - Core Base
+ * The heart of simpleful.css a.k.a Resething (reset thing) CSS to fix cross-browser inconsistencies and bugs
+ *
+ */
+
+/* === Base reset === */
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:after, blockquote:before, q:after, q:before {
+	content: "";
+	content: none;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* === Add HTML5 display-role for older browsers === */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+}
+
+/* === Minimize the amount of non-essential motion === */
+@media (prefers-reduced-motion:no-preference){
+	:root{ scroll-behavior:smooth; }
+}
+
+/* === Set breakpoints detection === */
+body:after { display: none; }
+@media (min-width:320px) {
+	body:after { content: "xs"; }
+}
+@media (min-width:375px) {
+	body:after { content: "sm"; }
+}
+@media (min-width:768px) {
+	body:after { content: "md"; }
+}
+@media (min-width:1024px) {
+	body:after { content: "lg"; }
+}
+@media (min-width:1280px) {
+	body:after { content: "xl"; }
+}
+
+/* ===
+ 1. Prevent padding and border from affecting element width
+ 2. Remove any outline of element 
+=== */
+*, :after, :before{
+	border: 0 solid; /* 1 */
+	box-sizing: border-box; /* 1 */
+	outline: none; /* 2 */
+}
+
+/* === Smooth rendering font === */
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ===
+ 1. Add the default font size 
+ 2. Prevent adjustments of font size after orientation changes in iOS
+=== */ 
+html {
+	font-size: 16px; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* ===
+ 1. Using font size in `rem` for consistency, 1rem equals the font size of the html
+ 2. Add the sensible line-height in all browsers
+=== */
+body, button, input, textarea {
+	font-size: 1rem; /* 1 */
+	line-height: 1.5; /* 2 */
+}
+
+/* === Add the default font-family from our variable.css === */
+body, button, input, optgroup, select, textarea {
+	font-family: var(--rg-font-sans-serif);
+}
+
+/* === Add the default color style from our variable.css === */
+body {
+	background-color: var(--rg-body-bg);
+	color: var(--rg-body-color);
+}
+
+/* ===
+ 1. Add the default color from our variable.css 
+ 2. Remove the gray background on active links in IE 10
+ 3. Remove the underline in Chrome, Edge, IE, Opera, and Safari
+=== */
+a {
+	color: var(--rg-main); /* 1 */
+	background-color: transparent; /* 2 */
+	text-decoration: none; /* 3 */
+}
+
+/* === Add the default color from our variable.css  === */
+a:hover {
+	color: var(--rg-link-hover);
+}
+
+/* === Add the correct font weight and style === */
+b, strong {	font-weight: bold; }
+em, i { font-style: italic; }
+
+/* === 
+ 1. Remove border bottom in Chrome 57-
+ 2. Add the correct text decoration in Chrome, Edge, IE, Opera, & Safari
+=== */
+abbr[title] {
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
+}
+
+/* ===
+ 1. Add the default font-family from our variable.css
+ 2. Add the correct inheritance font in all browsers
+=== */
+pre, code, kbd, samp {
+	font-family: var(--rg-font-mono); /* 1 */
+	font-size: .875rem; /* 2 */
+}
+
+/* === Add the correct color for `code` & `bold` text inside link === */
+a > code, a > strong {
+	color: inherit;
+}
+
+/* === 
+ 1. Add the correct color in IE 9-
+ 2. Simpleful.css styling (editable)
+=== */
+mark {
+	background-color: #ff0; /* 1 */
+	color: #000; /* 1 */
+	padding: 0 .2em; /* 2 */
+}
+
+/* === Add the correct font size in all browsers === */
+small {	font-size: 80%; }
+
+/* === Prevent elements from affecting the line height in all browsers === */
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+sub { bottom: -.25em; }
+sup { top: -.5em; }
+
+/* ===
+ 1. Add default display block
+ 2. Add responsive width
+ 3. Remove unwanted bottom space 
+=== */
+img, svg, video, canvas, audio, iframe, embed, object {
+	display: block; /* 1 */
+	max-width: 100%; /* 2 */
+	vertical-align: middle; /* 3 */
+}
+
+/* === Maintain intrinsic aspect ratios === */
+img, svg, video, canvas {
+	height: auto;
+}
+
+/* === Audio without `[controls]` remains hidden in iOS 4-7 === */
+audio:not([controls]) {	display: none; }
+
+/* ===
+ 1. Reset border
+ 2. Solid, thin horizontal rules
+ 3. Remove Firefox `color: gray`
+ 4. Remove default `1px` height, and common `overflow: hidden`
+=== */
+hr {
+	border: none; /* 1 */
+	border-top: 1px solid var(--rg-border); /* 2 */
+	color: inherit; /* 3 */
+	height: 0; /* 4 */
+	overflow: visible; /* 4 */
+}
+
+/* === Hide the overflow in IE 10 === */
+svg { overflow: hidden; }
+
+/* === Add the correct display in Edge, IE 10+, and Firefox === */
+details { display: block; }
+
+/* === Add the correct display in all browsers === */
+summary { display: list-item; }
+
+/* === Always hide an element when it has the `hidden` HTML attribute === */
+[hidden] { display: none !important; }
+
+/* === Add the correct display in IE 10+ === */
+template { display: none; }
+
+/* === Remove the margin in Firefox and Safari === */
+button, input, optgroup, select, textarea {	margin: 0; }
+
+/* === Fix the inability to style clickable types in iOS and Safari === */
+button, html [type=button], [type=reset], [type=submit] { -webkit-appearance: button; }
+
+/* === Remove the inner border and padding in Firefox === */
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/* === Add the correct cursor === */
+button:not(:disabled), select, input[type='submit'], input[type='reset'], input[type='button'], input[type='checkbox'], input[type='range'], input[type='radio'] {
+	cursor: pointer;
+}
+
+/* === Remove the additional `:invalid` styles in Firefox === */
+:-moz-ui-invalid { box-shadow: none; }
+
+/* === Correct the cursor style of increment and decrement buttons in Safari === */
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/* ===
+ 1. Correct the odd appearance in Chrome and Safari
+ 2. Correct the outline style in Safari
+=== */
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/* === Remove the inner padding in Chrome and Safari on macOS === */
+::-webkit-search-decoration { -webkit-appearance: none; }
+
+/* ===
+ 1. Correct the inability to style clickable types in iOS and Safari.
+ 2. Change font properties to `inherit` in Safari.
+=== */
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/* === Prevent resizing textareas horizontally by default === */
+textarea { resize: vertical; }
+
+/* === Reset the default placeholder opacity in Firefox === */
+input::placeholder, textarea::placeholder { opacity: 1; }

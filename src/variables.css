@@ -1,0 +1,20 @@
+:root {
+	--rg-main: #fe4439; 
+	--rg-body-bg: #222222; 
+	--rg-body-color: #dedede; 
+	--rg-border: #6f6f6e; 
+	--rg-link-hover: #f24136; 
+	--rg-heading: #ffffff; 
+	--rg-code-color: #ffbfbb; 
+	--rg-button-color: #ffffff; 
+	--rg-button-hover: #a52c25; 
+	--rg-input-bg: #ffffff; 
+	--rg-input-color: #445566; 
+	--rg-input-placeholder: #8899aa; 
+	--rg-input-disabled-bg: #ebebeb; 
+	--rg-light: #9fa0a3; 
+	--rg-muted: #6e6e6f; 
+	--rg-other-bg: #131313; 
+	--rg-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--rg-font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

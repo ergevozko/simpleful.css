@@ -1,0 +1,10 @@
+# Files
+.DS_Store
+.nyc_output
+npm-debug.log
+
+# Folders
+build/
+dev/
+node_modules/
+release/
