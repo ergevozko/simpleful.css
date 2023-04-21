@@ -27,7 +27,7 @@ Simply copy GitHub CDN below…
 ```
 
 ### Custom Build
-There's also a modular version in [`src`](https://github.com/ergevozko/simpleful.css/tree/main/src/build) directory
+There's also a modular version in [`src`](https://github.com/ergevozko/simpleful.css/tree/main/src) directory
 where you can choose the components you need inside `src/optional` folder.
 But you must compile them manually with `src/variables.css` and `src/core/base.css` into single stylesheet or follow the order below…
 
@@ -40,7 +40,7 @@ But you must compile them manually with `src/variables.css` and `src/core/base.c
 - `src/optional/flexgrid.css`: Responsive grid container based on the flex display property or flexbox.
 
 > **Note**: Be aware that in two methods above we use CSS Custom Properties and some legacy browsers like Internet Explorer 11 (or older version) doesn't support it.
-If you want to override simpleful.css theme but still compatible with IE, you need to read [this](###supporting-internet-explorer).
+If you want to override simpleful.css theme but still compatible with IE, you need to read [this](#how-to-support-internet-explorer).
 
 ## Need to know
 More information you must know and remember…
@@ -67,7 +67,7 @@ Be sure to have your template set up with `<!doctype html>` for HTML5 doctype an
 ### Theming
 
 > **Note**: If you use a version with support for Internet Explorer,
-please skip this and read [How to support Internet Explorer](###supporting-internet-explorer) instead!
+please skip this and read [How to support Internet Explorer](#how-to-support-internet-explorer) instead!
 
 Build your own theme is super easy to do! With our CSS Custom Properties (variables) to define its base styles such as colors,
 you only need to change any variables in `src/variables.css` or add your own stylesheet after simpleful.css to override the default variables.
@@ -108,7 +108,7 @@ Here's a list of all the variables you can change to your liking…
 
 ### Class prefix
 Every name of our class always begin with `rg-` to avoid conflicts with other CSS.
-In some cases, we may add some _abbreviations string_ to keep the class names concise for building responsively with [media query breakpoints](####breakpoints).
+In some cases, we may add some _abbreviations string_ to keep the class names concise for building responsively with [media query breakpoints](#breakpoints).
 
 ### Breakpoints
 Also called media query breakpoints, it's needed to control how the layout can adapts to specific screen widths. 
@@ -139,4 +139,4 @@ you'll need to make your changes in the source files inside `src/core` and `src/
 
 
 ## Help us
-Please let us know if you find any bugs, have suggestion or question by filing an issue on our [GitHub issues](https://github.com/ergevozko/simpeful.css/issues).
+Please let us know if you find any bugs, have suggestion or question by filing an issue on our [GitHub issues](https://github.com/ergevozko/simpleful.css/issues).
