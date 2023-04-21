@@ -31,7 +31,7 @@ There's also a modular version in [`src`](https://github.com/ergevozko/simpleful
 where you can choose the components you need inside `src/optional` folder.
 But you must compile them manually with `src/variables.css` and `src/core/base.css` into single stylesheet or follow the order below…
 
-- `src/variables.css`: A CSS Custom Properties (CSS Variable) that allows you to [change theme color](###theming) by just changing the values of the variables.
+- `src/variables.css`: A CSS Custom Properties (CSS Variable) that allows you to [change theme color](#theming) by just changing the values of the variables.
 - `src/core/base.css`: The core of simpleful.css that include our Resething CSS. Without our styling may not be working as expected.
 - `src/optional/richtext.css`: Very simple css for all text level semantics element.
 - `src/optional/button.css`: Very simple css for button element.
