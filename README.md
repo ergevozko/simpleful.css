@@ -6,7 +6,7 @@
 
 Very simple but useful CSS modules to make your simple website good looking and responsive.
 
-![Version](https://img.shields.io/badge/version-v0.1.0-orange?style=flat-square)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/ergevozko/simpleful.css?style=flat-square)
 
 ## Features
 - Resething _(reset thing)_ CSS to fix cross-browser inconsistencies and bugs.
